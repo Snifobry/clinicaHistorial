@@ -48,9 +48,6 @@ public class usuarioEntidad {
     @AssertTrue
     private boolean alergia;
 
-    @Size(min=10, max=150)
-    private String enfermedad;
-
 
 
 }
