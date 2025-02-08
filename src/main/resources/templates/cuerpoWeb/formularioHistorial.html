@@ -35,67 +35,86 @@
 </nav>
 <!-- FIN BARRA -->
 <!--INicio formulario -->
-<div>
-    <h1>Formulario Historial Clinico</h1>
-    <form>
+<div class="max-w-3xl mx-auto p-6">
+    <h1 class="text-3xl font-semibold text-center mb-6">Formulario Historial Clínico</h1>
+    <form class="space-y-6">
+        <!-- Nombres -->
         <div>
-            <label>Nombres:</label>
-            <input type="text">
-            <br>
-            <span>Error en los Nombres Ingresados</span>
+            <label for="nombres" class="block text-sm font-medium text-gray-700">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ingresa tus nombres">
+            <span class="text-sm text-red-500">Error en los Nombres Ingresados</span>
+        </div>
+
+        <!-- Contraseña -->
+        <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña:</label>
+            <input type="password" id="password" name="password" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ingresa una contraseña">
+            <span class="text-sm text-red-500">Error en la Contraseña Ingresada</span>
+        </div>
+
+        <!-- Correo -->
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Correo:</label>
+            <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ingresa tu correo electrónico">
+            <span class="text-sm text-red-500">Error en el Correo Ingresado</span>
+        </div>
+
+        <!-- Teléfono -->
+        <div>
+            <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ingresa tu teléfono">
+            <span class="text-sm text-red-500">Error en telefono Ingresado</span>
+        </div>
+
+        <!-- Domicilio -->
+        <div>
+            <label for="domicilio" class="block text-sm font-medium text-gray-700">Domicilio:</label>
+            <textarea id="domicilio" name="domicilio" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ingresa tu domicilio"></textarea>
+            <span class="text-sm text-red-500">Error en el Domicilio Ingresado</span>
+        </div>
+
+        <!-- Género -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Género:</label>
+            <div class="flex items-center space-x-4">
+                <div>
+                    <input type="radio" id="masculino" name="genero" value="Masculino" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                    <label for="masculino" class="ml-2 text-sm text-gray-700">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="femenino" name="genero" value="Femenino" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                    <label for="femenino" class="ml-2 text-sm text-gray-700">Femenino</label>
+                </div>
+            </div>
+            <span class="text-sm text-red-500">Error en el Género seleccionado</span>
+        </div>
+
+        <!-- Fecha de nacimiento -->
+        <div>
+            <label for="fechaNacimiento" class="block text-sm font-medium text-gray-700">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            <span class="text-sm text-red-500">Error en la fecha de nacimiento Ingresada</span>
         </div>
         <div>
-            <label>Contraseña:</label>
-            <input type="password">
-            <br>
-            <span>Error en la Contraseña Ingresada</span>
-        </div>
-        <div>
-            <label>Correo:</label>
-            <input type="email">
-            <br>
-            <span>Error en el Correo Ingresado</span>
-        </div>
-        <div>
-            <label>Telefono:</label>
-            <input type="text">
-            <br>
-            <span>Error en telefono Ingresado</span>
-        </div>
-        <div>
-            <label>Domicilio:</label>
-            <textarea rows="5" cols="225"></textarea>
-            <br>
-            <span>Error en el Domicilio Ingresado</span>
-        </div>
-        <div>
-            <label>Genero:</label>
-            <!-- radio es para seleccionar un recuadro -->
-            <input type="radio" value="Masculino">Masculino
-            <input type="radio" value="Femenino">Femenino
-            <br>
-            <span>Error en el Género seleccionad</span>
-        </div>
-        <div>
-            <label>Fecha de nacimiento:</label>
-            <input type="date">
-            <br>
-            <span>Error en la fecha de nacimiento Ingresada</span>
-        </div>
-        <div>
-            <label>Tipo de Sangre:</label>
-            <select>
+            <label for="tipoSangre" class="block text-sm font-medium text-gray-700">Tipo de Sangre:</label>
+            <select id="tipoSangre" name="tipoSangre" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                 <option></option>
             </select>
             <br>
-            <span>Error no selecciono ninguno</span>
+            <span class="text-sm text-red-500">Error no selecciono ninguno</span>
         </div>
+    <!-- Alergias -->
         <div>
-            <label>Presenta Alergias?:</label>
-            <input type="checkbox">
-            <br>
-            <span>Error no selecciono</span>
+            <label for="alergias" class="block text-sm font-medium text-gray-700">Presenta Alergias?:</label>
+            <input type="checkbox" id="alergias" name="alergias" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+            <span class="text-sm text-red-500">Error no selecciono</span>
         </div>
+    </form>
+</div>
+<!-- Submit -->
+<div class="flex justify-center">
+    <button type="submit" class="mt-4 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300">Enviar</button>
+</div>
 
     </form>
 </div>
